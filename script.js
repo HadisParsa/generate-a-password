@@ -1,10 +1,9 @@
-// Assignment Code
 var generateBtn = document.querySelector("#generate");
-// defining paswoord charector variables
-var upperCase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 
+// defining paswoord charector variables
+
+var upperCase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 var lowerCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "v", "z"];
-//numbers and symbols
 var number = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 var symbols = ["!", "@", "#", "$", "%", "^", "&", "*", "-", "+"];
 
@@ -21,12 +20,11 @@ function generatePassword() {
     alert("please choose the lenght at least 8 characters and no more than 128 characters ");
     return;
   }
+
+  var availableCharacters = [];
   // ask for lower, upper, numbers, symbols
   // confirm function - returns true or false
   //check if user wants them, if so, add to availableCharacters array
-  var availableCharacters = [];
-
-  // check if user wants uppers, if so, add uppers to availableCharacters array
   var includeUpper = confirm("Confirm if you want uppercase letters");
   if (includeUpper) {
     availableCharacters = upperCase.concat(availableCharacters);
@@ -73,11 +71,8 @@ function generatePassword() {
     var password = "";
 
     for (var i = 0; i < passwordLength; i++) {
-
-
       password += availableCharacters[Math.floor(Math.random() * availableCharacters.length)];
       console.log(password);
-
     }
     return password;
 
