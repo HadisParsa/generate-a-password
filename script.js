@@ -9,7 +9,6 @@ var number = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 var symbols = ["!", "@", "#", "$", "%", "^", "&", "*", "-", "+"];
 
 
-
 function generatePassword() {
 
   // ask for the length of the password
@@ -67,9 +66,15 @@ function generatePassword() {
   // Check that there is at least one value of each selected type in the password, if not, generate again.
   if (includeUpper == true || includeLowerCase == true || includeSymbol == true || includeNumber == true) {
 
+    //for loop, starting at 0, ending at password length
+    //snippet to generate a random index in an array:
+    //inside the for loop select a character out of the array.
+    //Add it to the password (use the += operator to add a character to a string)
     var password = "";
 
-    for (var i = 0; i < passwordLength.length; i++) {
+    for (var i = 0; i < passwordLength; i++) {
+
+
       password += availableCharacters[Math.floor(Math.random() * availableCharacters.length)];
       console.log(password);
 
@@ -91,17 +96,3 @@ function writePassword() {
 
 }
 generateBtn.addEventListener("click", writePassword);
-
-/*
-
-for loop, starting at 0, ending at password length
-inside the for loop
-select a character out of the array.
-Add it to the password (use the += operator to add a character to a string)
-snippet to generate a random index in an array:
-Math.floor(Math.random() * availableCharacters.length)
-
-Check that there is at least one value of each selected type in the password, if not, generate again.
-
-return the password value
-*/
