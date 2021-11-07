@@ -10,7 +10,10 @@ But fist with series of prompts the following tasked for password criteria will 
 
 Then, a password will generate a password that matche with the selected criteria and it will generate written to the page.
 
-## Installation
+## Link
+You can experience the deployed project here: [ Pssword Generator URL ]( https://hadisparsa.github.io/generate-a-password/).
+  
+  ## Installation
 
 The following images shows the web application's appearance and functionality:
 
